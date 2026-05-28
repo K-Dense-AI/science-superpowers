@@ -1,0 +1,18 @@
+{
+  "name": "science-superpowers-dev",
+  "description": "Development marketplace for the science-superpowers skills library",
+  "owner": {
+    "name": "K-Dense, Inc."
+  },
+  "plugins": [
+    {
+      "name": "science-superpowers",
+      "description": "Computational-science methodology for Claude Code: research framing, pre-registration, reproducible analysis, anomaly investigation, and red-team review",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "K-Dense, Inc."
+      }
+    }
+  ]
+}

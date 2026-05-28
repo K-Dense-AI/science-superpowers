@@ -1,0 +1,7 @@
+{
+  "name": "science-superpowers",
+  "version": "0.1.0",
+  "author": "K-Dense, Inc.",
+  "type": "module",
+  "main": ".opencode/plugins/science-superpowers.js"
+}

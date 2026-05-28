@@ -1,0 +1,24 @@
+{
+  "name": "science-superpowers",
+  "displayName": "Science Superpowers",
+  "description": "Computational-science methodology: research framing, pre-registration, reproducible analysis, anomaly investigation, and red-team review",
+  "version": "0.1.0",
+  "author": {
+    "name": "K-Dense, Inc."
+  },
+  "homepage": "https://github.com/K-Dense-AI/science-superpowers",
+  "repository": "https://github.com/K-Dense-AI/science-superpowers",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "science",
+    "research",
+    "pre-registration",
+    "reproducibility",
+    "statistics",
+    "data-analysis",
+    "workflows"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks-cursor.json"
+}
