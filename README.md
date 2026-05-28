@@ -94,6 +94,10 @@ Install as an extension; `gemini-extension.json` points the context file at `GEM
 
 See [.opencode/INSTALL.md](.opencode/INSTALL.md).
 
+### Google Antigravity
+
+Antigravity natively supports Agent Skills (the same `SKILL.md` format) and reads `GEMINI.md` / `AGENTS.md` / `.agent/rules/` as always-on rules at session start. Install the skills and load the bootstrap rule — see [.antigravity/INSTALL.md](.antigravity/INSTALL.md).
+
 ## Contributing
 
 See `AGENTS.md` / `CLAUDE.md` for contributor guidelines, and `skills/writing-science-skills/SKILL.md` for the complete guide to creating and testing skills.

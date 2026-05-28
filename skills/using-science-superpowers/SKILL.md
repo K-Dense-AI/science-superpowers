@@ -33,11 +33,13 @@ If CLAUDE.md, GEMINI.md, or AGENTS.md says "skip pre-registration" and a skill s
 
 **In Gemini CLI:** Skills activate via the `activate_skill` tool. Gemini loads skill metadata at session start and activates the full content on demand.
 
+**In Google Antigravity:** Skills are Antigravity Agent Skills (same `SKILL.md` format). Antigravity equips a skill automatically when your request matches its `description`. The always-on bootstrap rule keeps the discipline active from the first message, before any skill is equipped. See `references/antigravity-tools.md`.
+
 **In other environments:** Check your platform's documentation for how skills are loaded.
 
 ## Platform Adaptation
 
-Skills use Claude Code tool names. Non-CC platforms: see `references/copilot-tools.md` (Copilot CLI), `references/codex-tools.md` (Codex) for tool equivalents. Gemini CLI users get the tool mapping loaded automatically via GEMINI.md.
+Skills use Claude Code tool names. Non-CC platforms: see `references/copilot-tools.md` (Copilot CLI), `references/codex-tools.md` (Codex), `references/antigravity-tools.md` (Google Antigravity) for tool equivalents. Gemini CLI users get the tool mapping loaded automatically via GEMINI.md.
 
 # Using Skills
 
