@@ -1,6 +1,6 @@
 ---
 name: framing-research-questions
-description: "You MUST use this before any analysis work - exploring a dataset, running a model, computing a statistic, or testing an idea. Turns a vague research interest into a precise, falsifiable question before any data is touched."
+description: You MUST use this before any data analysis or investigation - before exploring a dataset, loading or profiling data, running a model, computing a statistic, or testing an idea, and before any outcome data is touched
 ---
 
 # Framing Research Questions Into Investigations
