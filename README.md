@@ -1,8 +1,30 @@
 # Science Superpowers
 
-Science Superpowers is a complete computational-science methodology for your research agents, built on a set of composable skills plus initial instructions that make sure your agent actually uses them.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/Skills-15-brightgreen.svg)](#whats-inside)
+[![Follow on X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
+[![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
+
+Science Superpowers is a complete computational-science methodology for your research agents, built on a set of composable skills plus initial instructions that make sure your agent actually uses them. It has **zero third-party dependencies** — it runs with only your agent harness and a POSIX shell.
+
+> ⭐ **If Science Superpowers helps your research, please [star this repository](https://github.com/K-Dense-AI/science-superpowers).** A star helps other scientists and engineers find the project and tells us the methodology is worth expanding.
+>
+> **Stay up to date:** Follow K-Dense on [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), and [YouTube](https://www.youtube.com/@K-Dense-Inc) for new skills, release announcements, and research workflow demos.
 
 It is a reimplementation of [Superpowers](https://github.com/obra/superpowers) (a software-development methodology) for a different domain: doing science with data. The architecture is the same — skills that auto-trigger via a session-start bootstrap — but the workflow is the research lifecycle, and the central discipline is **pre-registration** instead of test-driven development.
+
+## Contents
+
+- [How it works](#how-it-works)
+- [The basic workflow](#the-basic-workflow)
+- [Example: what using it looks like](#example-what-using-it-looks-like)
+- [What's inside](#whats-inside)
+- [Philosophy](#philosophy)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Star history](#star-history)
 
 ## How it works
 
@@ -29,38 +51,60 @@ Because the skills trigger automatically, you don't need to do anything special.
 
 **The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
 
+## Example: what using it looks like
+
+You don't invoke anything. You just talk to your agent like normal — the skills trigger themselves.
+
+> **You:** I have last quarter's churn data. Does our new onboarding flow reduce churn?
+
+A vanilla agent would load the CSV and start slicing. With Science Superpowers, the agent steps back first:
+
+> **Agent:** Before touching the data, let me frame this precisely (`framing-research-questions`). The question is whether the new onboarding flow *causes* lower 90-day churn — but users weren't randomly assigned to it, so cohort and seasonality are confounders. Here's the falsifiable version, the data we'd need, and what would count as an answer…
+>
+> *[surveys prior internal analyses and standard methods, then designs the analysis]*
+>
+> **Agent:** I'm now **pre-registering** the hypothesis, the directional prediction (new flow → lower churn), and the decision rule **before** I look at any outcome (`preregistering-analysis`). Everything beyond this that wasn't pre-registered will be labeled exploratory.
+>
+> *[runs the pre-registered plan in a pinned, seeded, reproducible workspace; an anomaly appears]*
+>
+> **Agent:** One cohort shows implausibly low churn. Rather than dropping it, I'm root-causing it (`investigating-anomalous-results`) — it turns out to be a logging gap, not a real effect.
+>
+> *[verifies every claim against freshly reproduced output, then red-teams its own conclusion before reporting]*
+
+The result is an analysis where the confirmatory claims are protected from p-hacking and HARKing, the anomalies were explained rather than hidden, and every number can be reproduced.
+
 ## What's inside
 
 ### Skills library
 
 **Framing**
-- **framing-research-questions** — Turn an interest into a falsifiable question (entry gate)
-- **surveying-prior-work** — Ground the question and methods in existing literature
+- **[framing-research-questions](skills/framing-research-questions/SKILL.md)** — Turn an interest into a falsifiable question (entry gate)
+- **[surveying-prior-work](skills/surveying-prior-work/SKILL.md)** — Ground the question and methods in existing literature
 
 **Planning & pre-registration**
-- **designing-the-analysis** — Detailed, bite-sized analysis plan
-- **preregistering-analysis** — Lock predictions and decision rules before seeing outcomes (includes statistical-fallacies reference)
+- **[designing-the-analysis](skills/designing-the-analysis/SKILL.md)** — Detailed, bite-sized analysis plan
+- **[preregistering-analysis](skills/preregistering-analysis/SKILL.md)** — Lock predictions and decision rules before seeing outcomes (includes statistical-fallacies reference)
 
 **Execution**
-- **subagent-driven-analysis** — Fresh subagent per analysis step with two-stage review
-- **executing-analysis** — Inline batch execution with checkpoints
+- **[subagent-driven-analysis](skills/subagent-driven-analysis/SKILL.md)** — Fresh subagent per analysis step with two-stage review
+- **[executing-analysis](skills/executing-analysis/SKILL.md)** — Inline batch execution with checkpoints
+- **[dispatching-parallel-investigations](skills/dispatching-parallel-investigations/SKILL.md)** — Concurrent independent investigations
 
 **Discipline**
-- **investigating-anomalous-results** — 4-phase root-cause process for surprising results
-- **verifying-results-before-claiming** — Evidence before claims
+- **[investigating-anomalous-results](skills/investigating-anomalous-results/SKILL.md)** — 4-phase root-cause process for surprising results
+- **[verifying-results-before-claiming](skills/verifying-results-before-claiming/SKILL.md)** — Evidence before claims
 
 **Review**
-- **requesting-red-team-review** — Dispatch a skeptical reviewer to attack the analysis
-- **receiving-critical-review** — Respond to critique with rigor, not performative agreement
+- **[requesting-red-team-review](skills/requesting-red-team-review/SKILL.md)** — Dispatch a skeptical reviewer to attack the analysis
+- **[receiving-critical-review](skills/receiving-critical-review/SKILL.md)** — Respond to critique with rigor, not performative agreement
 
 **Workspace & reporting**
-- **setting-up-reproducible-analysis** — Isolated, reproducible workspace
-- **reporting-and-archiving-findings** — Decide how to report; archive code, data, environment
-- **dispatching-parallel-investigations** — Concurrent independent investigations
+- **[setting-up-reproducible-analysis](skills/setting-up-reproducible-analysis/SKILL.md)** — Isolated, reproducible workspace
+- **[reporting-and-archiving-findings](skills/reporting-and-archiving-findings/SKILL.md)** — Decide how to report; archive code, data, environment
 
 **Meta**
-- **writing-science-skills** — Create new skills following the testing methodology
-- **using-science-superpowers** — Introduction to the skills system
+- **[writing-science-skills](skills/writing-science-skills/SKILL.md)** — Create new skills following the testing methodology
+- **[using-science-superpowers](skills/using-science-superpowers/SKILL.md)** — Introduction to the skills system
 
 ## Philosophy
 
@@ -105,3 +149,13 @@ See `AGENTS.md` / `CLAUDE.md` for contributor guidelines, and `skills/writing-sc
 ## License
 
 MIT License — see the LICENSE file. This project reimplements the architecture of [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent.
+
+## Star history
+
+<a href="https://www.star-history.com/?repos=K-Dense-AI%2Fscience-superpowers&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&legend=top-left" />
+ </picture>
+</a>
