@@ -148,7 +148,7 @@ See `AGENTS.md` / `CLAUDE.md` for contributor guidelines, and `skills/writing-sc
 
 ## License
 
-MIT License — see the LICENSE file. This project reimplements the architecture of [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent.
+MIT License — see the [LICENSE](LICENSE) file. This project reimplements the architecture of [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent; see [NOTICE](NOTICE) for attribution details.
 
 ## Star history
 

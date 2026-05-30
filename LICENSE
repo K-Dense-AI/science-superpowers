@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This project is a reimplementation of the architecture of Superpowers
-(https://github.com/obra/superpowers) by Jesse Vincent, adapted from a
-software-development methodology to a computational-science methodology.
-Superpowers is also MIT licensed. The skill content here is original; the
-plugin-packaging mechanics (session-start bootstrap hook, multi-harness
-manifests, version-sync tooling) are modeled on that project.

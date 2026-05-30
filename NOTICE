@@ -1,0 +1,7 @@
+Science Superpowers is a reimplementation of the architecture of Superpowers
+(https://github.com/obra/superpowers) by Jesse Vincent, adapted from a
+software-development methodology to a computational-science methodology.
+
+Superpowers is MIT licensed. The skill content in this repository is original;
+the plugin-packaging mechanics, including the session-start bootstrap hook,
+multi-harness manifests, and version-sync tooling, are modeled on that project.
