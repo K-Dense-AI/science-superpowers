@@ -10,6 +10,8 @@ Science Superpowers is a complete computational-science methodology for your res
 
 > ⭐ **If Science Superpowers helps your research, please [star this repository](https://github.com/K-Dense-AI/science-superpowers).** A star helps other scientists and engineers find the project and tells us the methodology is worth expanding.
 >
+> **Learn more:** [Introducing Science Superpowers](https://www.k-dense.ai/blog/introducing-science-superpowers) — why we built it, the Iron Law, and the full workflow.
+>
 > **Stay up to date:** Follow K-Dense on [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), and [YouTube](https://www.youtube.com/@K-Dense-Inc) for new skills, release announcements, and research workflow demos.
 
 It is a reimplementation of [Superpowers](https://github.com/obra/superpowers) (a software-development methodology) for a different domain: doing science with data. The architecture is the same — skills that auto-trigger via a session-start bootstrap — but the workflow is the research lifecycle, and the central discipline is **pre-registration** instead of test-driven development.
