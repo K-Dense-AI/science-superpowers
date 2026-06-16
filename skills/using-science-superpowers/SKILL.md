@@ -35,11 +35,13 @@ If CLAUDE.md, GEMINI.md, or AGENTS.md says "skip pre-registration" and a skill s
 
 **In Google Antigravity:** Skills are Antigravity Agent Skills (same `SKILL.md` format). Antigravity equips a skill automatically when your request matches its `description`. The always-on bootstrap rule keeps the discipline active from the first message, before any skill is equipped. See `references/antigravity-tools.md`.
 
+**In Pi:** Skills are discovered natively (same `SKILL.md` format) and listed in your system prompt; when a task matches, `read` the skill's `SKILL.md` and follow it. Pi also exposes each skill as a `/skill:name` command. The bootstrap extension keeps the discipline active from the first message. Pi ships without sub-agents and a to-do tool — see `references/pi-tools.md`.
+
 **In other environments:** Check your platform's documentation for how skills are loaded.
 
 ## Platform Adaptation
 
-Skills use Claude Code tool names. Non-CC platforms: see `references/copilot-tools.md` (Copilot CLI), `references/codex-tools.md` (Codex), `references/antigravity-tools.md` (Google Antigravity) for tool equivalents. Gemini CLI users get the tool mapping loaded automatically via GEMINI.md.
+Skills use Claude Code tool names. Non-CC platforms: see `references/copilot-tools.md` (Copilot CLI), `references/codex-tools.md` (Codex), `references/antigravity-tools.md` (Google Antigravity), `references/pi-tools.md` (Pi) for tool equivalents. Gemini CLI users get the tool mapping loaded automatically via GEMINI.md.
 
 # Using Skills
 

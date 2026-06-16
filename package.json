@@ -3,5 +3,10 @@
   "version": "0.1.0",
   "author": "K-Dense, Inc.",
   "type": "module",
-  "main": ".opencode/plugins/science-superpowers.js"
+  "main": ".opencode/plugins/science-superpowers.js",
+  "keywords": ["pi-package"],
+  "pi": {
+    "skills": ["./skills"],
+    "extensions": ["./.pi/extensions"]
+  }
 }

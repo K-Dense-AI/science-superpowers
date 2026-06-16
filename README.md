@@ -140,6 +140,13 @@ Install as an extension; `gemini-extension.json` points the context file at `GEM
 
 See [.opencode/INSTALL.md](.opencode/INSTALL.md).
 
+### Pi
+
+Pi natively reads the same `SKILL.md` format. Install the package with
+`pi install git:github.com/K-Dense-AI/science-superpowers`; the `package.json` `pi` key
+registers the skills and a `before_agent_start` extension loads the bootstrap. See
+[.pi/INSTALL.md](.pi/INSTALL.md).
+
 ### Google Antigravity
 
 Antigravity natively supports Agent Skills (the same `SKILL.md` format) and reads `GEMINI.md` / `AGENTS.md` / `.agent/rules/` as always-on rules at session start. Install the skills and load the bootstrap rule — see [.antigravity/INSTALL.md](.antigravity/INSTALL.md).
