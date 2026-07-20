@@ -24,6 +24,15 @@ Before reporting anything, confirm the whole analysis reproduces from immutable 
 
 Use `science-superpowers:verifying-results-before-claiming`. **If it doesn't reproduce, stop** — fix reproducibility (possibly via `science-superpowers:investigating-anomalous-results`) before reporting. Don't report a number you can't regenerate.
 
+For any confirmatory claim, also run the pre-registration audit and keep its output for the report:
+
+```bash
+# ships with science-superpowers:preregistering-analysis
+<skills root>/preregistering-analysis/prereg.sh audit
+```
+
+**If the audit fails, the confirmatory label is indefensible** — the registration changed after its freeze, or outputs predate it. Relabel the affected analyses exploratory (or pre-register a fresh test on unused data) before reporting.
+
 ## Step 2: Detect Environment
 
 ```bash
@@ -162,7 +171,7 @@ Whatever the option, ensure the archive contains everything needed to regenerate
 - The code (committed)
 - The environment lockfile and runtime version
 - The fixed seed
-- The frozen pre-registration (commit reference)
+- The frozen pre-registration (commit reference) and the passing `prereg.sh audit` output
 - Data provenance + checksums for raw inputs (and the data itself, or instructions to obtain it, per any data-sharing constraints)
 - The exact command(s) to re-run
 

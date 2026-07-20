@@ -30,6 +30,9 @@ BEFORE claiming any result or expressing satisfaction:
 2. RUN: Execute it fresh and complete (from the immutable raw data, fixed seed)
 3. READ: The actual output — the estimate, the interval, the p-value, the diagnostics
 4. CHECK: Do the method's assumptions hold? Does it reproduce?
+   For a CONFIRMATORY claim: does the pre-registration audit pass?
+   (prereg.sh, ships with science-superpowers:preregistering-analysis:
+    <skills root>/preregistering-analysis/prereg.sh audit)
 5. VERIFY: Does the output actually support the claim?
    - If NO: state the real result with evidence
    - If YES: state the claim WITH the evidence (number + interval)
@@ -48,7 +51,7 @@ Skip any step = asserting, not verifying
 | "Assumptions are met" | The diagnostic output, read | "It's probably fine" |
 | "The model is good" | Out-of-sample metric | In-sample fit / training accuracy |
 | "Data cleaned correctly" | Validation counts (rows in/out, ranges) | "The script ran without error" |
-| "Confirmatory finding" | It was pre-registered AND re-run as registered | Matches what I expected |
+| "Confirmatory finding" | `prereg.sh audit` passes AND re-run as registered | The prereg file was committed before the results (it may have been edited after) |
 | "The subagent finished" | Inspect the committed artifacts/diff | The subagent said "done" |
 
 ## Red Flags - STOP
@@ -59,6 +62,7 @@ Skip any step = asserting, not verifying
 - Reporting a p-value you computed before the latest code change
 - Calling a result "reproducible" without having re-run it from raw
 - Trusting a subagent's success report
+- Calling a finding confirmatory without a passing `prereg.sh audit` — commit order alone is not a freeze
 - Describing a non-significant result as "no effect" without checking power/interval
 - **ANY wording implying a finding without having just produced the evidence**
 
@@ -72,6 +76,7 @@ Skip any step = asserting, not verifying
 | "p < .05, so it's real" | p is not the probability the effect is real. Report effect + interval. |
 | "p > .05, so no effect" | Could be underpowered. Absence of evidence ≠ evidence of absence. |
 | "The subagent reported success" | Verify the artifacts independently. |
+| "The prereg was committed before the results, so it's frozen" | Commit order misses post-freeze edits to the registration. Run `prereg.sh audit`; read the frozen-vs-current diff. |
 | "It reproduces, I'm sure" | Re-run from raw + seed and show the same number. |
 | "Different words, so the rule doesn't apply" | Spirit over letter. |
 
@@ -99,6 +104,12 @@ Skip any step = asserting, not verifying
 ```
 ✅ [Held-out test set, used once] [AUC=0.78] "Out-of-sample AUC 0.78."
 ❌ "Training accuracy is 0.97, the model is great."
+```
+
+**Confirmatory label:**
+```
+✅ [Run prereg.sh audit] [Read: RESULT: PASS] → apply the frozen decision rule to the fresh output
+❌ "The pre-registration predates the results commit, so the finding is confirmatory."
 ```
 
 **Subagent delegation:**

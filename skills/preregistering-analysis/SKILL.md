@@ -83,7 +83,18 @@ A registration is only real if some possible result would disconfirm the predict
 
 ### FREEZE — Make the timestamp real
 
-Write the pre-registration to `docs/science-superpowers/preregistrations/YYYY-MM-DD-<topic>.md` and commit it to git **before** touching outcomes. The commit is your timestamp: it proves the prediction preceded the result.
+Write the pre-registration to `docs/science-superpowers/preregistrations/YYYY-MM-DD-<topic>.md`, then freeze it with `prereg.sh` (it ships alongside this skill's SKILL.md) — **before** touching outcomes:
+
+```bash
+# <skill-dir> = this skill's directory, e.g. $CLAUDE_PLUGIN_ROOT/skills/preregistering-analysis
+<skill-dir>/prereg.sh freeze \
+    docs/science-superpowers/preregistrations/YYYY-MM-DD-<topic>.md \
+    data/raw/<raw-data-file>...
+```
+
+The freeze commit is your timestamp: it proves the prediction preceded the result. Passing the raw data files records their checksums, so post-freeze data edits are detectable. If the script is unavailable, commit the registration alone — its first-ever commit, message `prereg-freeze: <path>` — and never touch the file again; `audit` derives everything from git history.
+
+**A freeze is a claim the repo must be able to prove.** `prereg.sh audit` verifies from git history that the registration was never edited after its first commit, that no output was committed at-or-before the freeze, and that frozen data checksums still match. A registration commit that merely *precedes* the results proves nothing if the file changed afterward — "frozen" means unchanged since, and only the audit shows that.
 
 ### EXECUTE — Run exactly what you registered
 
@@ -98,7 +109,7 @@ Anything you do that was not registered — a follow-up, a subgroup, a different
 ```markdown
 # Pre-registration: <topic>
 
-**Frozen at commit:** <filled by the freeze commit>
+**Frozen at commit:** <stamped by prereg.sh freeze>
 **Question doc:** docs/science-superpowers/questions/<...>
 **Analysis plan:** docs/science-superpowers/plans/<...>
 
@@ -198,7 +209,8 @@ Before executing:
 - [ ] Sample size fixed; no optional stopping
 - [ ] Multiplicity handled
 - [ ] Exploratory analyses listed and labeled
-- [ ] Pre-registration committed to git BEFORE any outcome was observed
+- [ ] Pre-registration frozen with `prereg.sh freeze` (or an equivalent lone first commit) BEFORE any outcome was observed
+- [ ] `prereg.sh audit` passes — and it is re-run before any confirmatory claim is reported
 
 Can't check all boxes? You're not ready for a confirmatory claim.
 

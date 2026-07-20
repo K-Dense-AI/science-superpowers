@@ -85,7 +85,7 @@ The result is an analysis where the confirmatory claims are protected from p-hac
 
 **Planning & pre-registration**
 - **[designing-the-analysis](skills/designing-the-analysis/SKILL.md)** — Detailed, bite-sized analysis plan
-- **[preregistering-analysis](skills/preregistering-analysis/SKILL.md)** — Lock predictions and decision rules before seeing outcomes (includes statistical-fallacies reference)
+- **[preregistering-analysis](skills/preregistering-analysis/SKILL.md)** — Lock predictions and decision rules before seeing outcomes (includes a statistical-fallacies reference and `prereg.sh`, a zero-dependency freeze/audit script that proves from git history alone that predictions preceded outputs and were never edited after the freeze)
 
 **Execution**
 - **[subagent-driven-analysis](skills/subagent-driven-analysis/SKILL.md)** — Fresh subagent per analysis step with two-stage review
