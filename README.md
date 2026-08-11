@@ -26,7 +26,6 @@ It is a reimplementation of [Superpowers](https://github.com/obra/superpowers) (
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [License](#license)
-- [Star history](#star-history)
 
 ## How it works
 
@@ -158,13 +157,3 @@ See `AGENTS.md` / `CLAUDE.md` for contributor guidelines, and `skills/writing-sc
 ## License
 
 MIT License — see the LICENSE file. This project reimplements the architecture of [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent.
-
-## Star history
-
-<a href="https://www.star-history.com/?repos=K-Dense-AI%2Fscience-superpowers&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=K-Dense-AI/science-superpowers&type=date&legend=top-left" />
- </picture>
-</a>
