@@ -44,6 +44,19 @@ Looked? It's exploratory. Period.
 - Purely descriptive reporting with no inferential claim
 - Pure method development on simulated data
 - Re-analysis of already-public results
+- Feasibility mode, if your human partner opted into it (`science-superpowers:establishing-feasibility-first`) — registration is **deferred to the exit gate, not cancelled**, and nothing produced before it may be claimed as confirmatory
+
+## Don't Register Over Runs That Have Never Happened
+
+A registration whose configurations have never executed is not protection — it is rework waiting to happen. Before freezing, confirm:
+
+- Every configuration in the plan has run at least once, or is known to be runnable from a **measured** point (not an extrapolation)
+- Every acceptance criterion has been observed on a real run of the pipeline it judges. Writing "error decreases monotonically" for a pipeline you have never executed is writing a pass/fail rule for behavior you have not seen
+- The cheapest run that could falsify your prediction has been executed
+
+That last one matters most. If a run costing seconds could disconfirm the prediction you are about to freeze, run it first. A validation benchmark on different data or a different geometry cannot contaminate the confirmatory test — it is a separate measurement — so there is no rigor argument for freezing before it. Freezing a prediction that a cheap run would have falsified costs a re-registration and buys nothing.
+
+Where feasibility is genuinely unknown, that is the signal to offer feasibility mode rather than freeze early.
 
 Thinking "I'll just check the result first, then pre-register"? Stop. That's the rationalization this skill exists to stop.
 
@@ -181,6 +194,8 @@ Pre-registration IS pragmatic: it is the difference between a finding that repli
 | "Just one more specification" | One more fork. Pre-specify the primary; label the rest exploratory. |
 | "Deleting the peeked analysis is wasteful" | Don't delete it — relabel it exploratory. Don't promote it to confirmatory. |
 | "Stopping early since it's already significant" | Optional stopping inflates false positives. Honor the fixed N. |
+| "I'll freeze now and find out later if it runs" | A registration over unrunnable configurations is rework. Measure feasibility first. |
+| "Running the benchmark first would contaminate my prediction" | A validation benchmark is not the confirmatory test. Run it; an informed prediction beats a falsified one. |
 
 ## Red Flags - STOP and Re-frame
 

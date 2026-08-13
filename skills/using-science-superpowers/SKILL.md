@@ -108,6 +108,8 @@ When multiple skills could apply, use this order:
 "Let's investigate X" → framing-research-questions first, then execution skills.
 "This result looks wrong" → investigating-anomalous-results first.
 
+**Feasibility mode is the one opt-in branch.** If whether the computation can run at all is unknown, framing-research-questions offers `establishing-feasibility-first`. Only your human partner can choose it, and only they can end it. Never enter or leave that mode on your own initiative — and never enter it to avoid pre-registration.
+
 ## Skill Types
 
 **Rigid** (pre-registration, anomaly investigation, verification): Follow exactly. Don't adapt away discipline.

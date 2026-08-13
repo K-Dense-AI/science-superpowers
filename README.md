@@ -1,7 +1,7 @@
 # Science Superpowers
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-15-brightgreen.svg)](#whats-inside)
+[![Skills](https://img.shields.io/badge/Skills-16-brightgreen.svg)](#whats-inside)
 [![Follow on X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
 [![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
@@ -52,6 +52,14 @@ Because the skills trigger automatically, you don't need to do anything special.
 
 **The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
 
+### Feasibility mode (opt-in)
+
+The sequence above assumes the analysis *can* be run. When that is the open question — an unbenchmarked solver, a simulation that has never assembled at full size, a memory ceiling nobody has measured — paying for the full sequence first means writing plans and predictions for a study that may not exist.
+
+For that case the agent will *offer* **establishing-feasibility-first**: a minimal end-to-end runner, three scaling probes against a budget whose kill criteria are proven to fire, then one exploratory campaign — deferring the survey, plan, and pre-registration until the measured answer is in.
+
+It is **opt-in and opt-out by you alone**. The agent never enters the mode on its own initiative, never leaves it on its own initiative, and nothing produced inside it can be reported as confirmatory. Pre-registration is deferred, not cancelled: the exit gate hands back to the standard sequence at full strength, with the feasibility measurements as inputs to the design and the exploratory results as hypotheses rather than evidence.
+
 ## Example: what using it looks like
 
 You don't invoke anything. You just talk to your agent like normal — the skills trigger themselves.
@@ -81,6 +89,7 @@ The result is an analysis where the confirmatory claims are protected from p-hac
 **Framing**
 - **[framing-research-questions](skills/framing-research-questions/SKILL.md)** — Turn an interest into a falsifiable question (entry gate)
 - **[surveying-prior-work](skills/surveying-prior-work/SKILL.md)** — Ground the question and methods in existing literature
+- **[establishing-feasibility-first](skills/establishing-feasibility-first/SKILL.md)** — Opt-in exploratory/feasibility mode: prove the computation runs at scale before paying for process
 
 **Planning & pre-registration**
 - **[designing-the-analysis](skills/designing-the-analysis/SKILL.md)** — Detailed, bite-sized analysis plan

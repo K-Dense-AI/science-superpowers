@@ -13,7 +13,19 @@ Start by understanding the context (the data on hand, the domain, what your huma
 Do NOT load the dataset, compute any statistic, fit any model, plot any outcome, or invoke any execution skill until you have presented a research framing and your human partner has approved it. This applies to EVERY investigation regardless of perceived simplicity.
 
 **Why this gate is strict for science specifically:** Looking at outcomes before the question and predictions are fixed contaminates a confirmatory analysis. Once you have seen the data, you cannot un-see it, and every later choice (which test, which subgroup, which cutoff) becomes suspect. Framing first is what keeps a result confirmatory rather than a story told after the fact.
+
+**What this gate does NOT forbid:** measuring whether the computation can run — assembly size, peak memory, wall clock, iteration counts, convergence behavior. Those are provenance and structure, not outcomes. Resource measurement never contaminates a confirmatory analysis, because the outcome variable is untouched.
 </HARD-GATE>
+
+## When Feasibility Is Unknown
+
+If it is not yet known whether the computation can run at all — an unbenchmarked solver, an unproven pipeline, a configuration whose memory or wall-clock ceiling is estimated rather than measured — say so during framing and offer feasibility mode:
+
+> "Whether this can run at scale is unknown, and the design depends on the answer. I can establish feasibility first — a minimal runner, three scaling probes, one exploratory campaign — and defer the survey, plan, and pre-registration until we know what is runnable. Nothing produced that way can support a confirmatory claim. Or we proceed with the standard sequence. Which?"
+
+**Only your human partner can choose it.** If they do, use `science-superpowers:establishing-feasibility-first` after a short framing. If they decline or say nothing, continue the standard sequence below.
+
+Separate the two questions in the framing either way: the feasibility question (a measurable threshold) and the scientific question it gates. Tangling them produces predictions written over runs that may not be possible.
 
 ## Anti-Pattern: "This Is Too Simple To Need Framing"
 
@@ -59,7 +71,7 @@ digraph framing {
 }
 ```
 
-**The terminal state is invoking surveying-prior-work** (then designing-the-analysis). Do NOT jump to loading data or fitting models. The ONLY skills you invoke after framing are surveying-prior-work and designing-the-analysis.
+**The terminal state is invoking surveying-prior-work** (then designing-the-analysis). Do NOT jump to loading data or fitting models. The ONLY skills you invoke after framing are surveying-prior-work and designing-the-analysis — or, if and only if your human partner opted into feasibility mode, establishing-feasibility-first.
 
 ## The Process
 
