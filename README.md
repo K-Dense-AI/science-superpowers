@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/Skills-16-brightgreen.svg)](#whats-inside)
+[![Agent Plugins](https://img.shields.io/badge/Agent_Plugins-v1.0.0-6E56CF.svg)](https://agent-plugins.org/)
 [![Follow on X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
 [![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
@@ -127,6 +128,12 @@ The result is an analysis where the confirmatory claims are protected from p-hac
 ## Installation
 
 Installation differs by harness. If you use more than one, install Science Superpowers separately for each.
+
+### Agent Plugins (any conformant client)
+
+This repository is a valid [Agent Plugins](https://agent-plugins.org/) v1.0.0 package — the open, vendor-neutral plugin standard. The portable manifest is `plugin.json` at the repository root, and the sixteen skills are the immediate children of `skills/`, each with its own `SKILL.md`.
+
+Any client that implements the specification can install Science Superpowers by pointing at this repository; no harness-specific configuration is required for the skills themselves. Bootstrap hooks remain client-specific — see the sections below for the harness you use, or invoke the `using-science-superpowers` skill manually at the start of a session.
 
 ### Cursor
 

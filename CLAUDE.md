@@ -33,6 +33,14 @@ check for and invoke relevant skills before acting. Skills are markdown files un
   or library, make that explicit in its triggers.
 - Run `scripts/bump-version.sh --check` after touching any manifest to confirm versions
   stay in sync across all harnesses.
+- The root `plugin.json` is the portable [Agent Plugins](https://agent-plugins.org/) v1.0.0
+  manifest. Its schema is **closed**: the only permitted top-level fields are `$schema`,
+  `name`, `version`, `description`, `author`, `homepage`, `repository`, `license`,
+  `keywords`, and `extensions`. Never add `skills`, `hooks`, `agents`, `commands`, or
+  `mcpServers` there — harness-specific manifests keep their own fields, and anything
+  client-specific belongs under a reverse-domain key in `extensions`. Keep `skills/` at the
+  repository root with one `SKILL.md` per immediate subdirectory; that layout is what the
+  spec discovers.
 
 ## General
 

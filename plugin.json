@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "science-superpowers",
+  "version": "0.1.0",
+  "description": "Computational-science methodology for research agents: question framing, prior-work survey, analysis design, pre-registration, reproducible execution, anomaly investigation, results verification, and red-team review.",
+  "author": {
+    "name": "K-Dense, Inc.",
+    "url": "https://www.k-dense.ai"
+  },
+  "homepage": "https://github.com/K-Dense-AI/science-superpowers",
+  "repository": "https://github.com/K-Dense-AI/science-superpowers",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "science",
+    "research",
+    "pre-registration",
+    "reproducibility",
+    "statistics",
+    "data-analysis",
+    "workflows"
+  ]
+}
