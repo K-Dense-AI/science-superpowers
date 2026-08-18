@@ -11,7 +11,7 @@ Science Superpowers is a complete computational-science methodology for your res
 
 > ⭐ **If Science Superpowers helps your research, please [star this repository](https://github.com/K-Dense-AI/science-superpowers).** A star helps other scientists and engineers find the project and tells us the methodology is worth expanding.
 >
-> **Learn more:** [Introducing Science Superpowers](https://www.k-dense.ai/blog/introducing-science-superpowers) — why we built it, the Iron Law, and the full workflow.
+> **Learn more:** [Introducing Science Superpowers](https://www.k-dense.ai/blog/introducing-science-superpowers) — why we built it, the Iron Law, and the full workflow. Related essays are collected under [From the blog](#from-the-blog).
 >
 > **Stay up to date:** Follow K-Dense on [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), and [YouTube](https://www.youtube.com/@K-Dense-Inc) for new skills, release announcements, and research workflow demos.
 
@@ -24,6 +24,7 @@ It is a reimplementation of [Superpowers](https://github.com/obra/superpowers) (
 - [Example: what using it looks like](#example-what-using-it-looks-like)
 - [What's inside](#whats-inside)
 - [Philosophy](#philosophy)
+- [From the blog](#from-the-blog)
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [License](#license)
@@ -125,6 +126,25 @@ The result is an analysis where the confirmatory claims are protected from p-hac
 - **Reproducibility** — Pinned environments, fixed seeds, immutable raw data
 - **Evidence over claims** — Verify before declaring a finding
 - **Root cause over patching** — Investigate anomalies; don't quietly drop data
+
+## From the blog
+
+Essays from the [K-Dense blog](https://www.k-dense.ai/blog) on this methodology and the problems it is built to solve.
+
+**This project**
+- **[Introducing Science Superpowers](https://www.k-dense.ai/blog/introducing-science-superpowers)** (May 28, 2026) — Why we built it, the Iron Law, and the full workflow: pre-registration over TDD.
+- **[Your AI Assistant Reasons Like a Generalist. Science Needs a Specialist.](https://www.k-dense.ai/blog/introducing-scientific-agents)** (June 2, 2026) — Companion open-source `AGENTS.md` profiles; names Science Superpowers as the methodology layer that puts pre-registration ahead of trial and error.
+
+**Why discipline, not a smarter model**
+- **[AI Co-Scientist, Not AI Scientist: Why the Name Matters](https://www.k-dense.ai/blog/ai-co-scientist-not-ai-scientist)** (May 5, 2026) — Keep the human scientist front and center; the agent is a partner, not a replacement.
+- **[The AI Co-Scientist Is Here. The Bottleneck Is Verification.](https://www.k-dense.ai/blog/ai-co-scientist-verification-bottleneck)** (June 3, 2026) — Power is not the open question; whether the work is verifiable is.
+- **[The Model Is No Longer the Bottleneck](https://www.k-dense.ai/blog/the-model-is-no-longer-the-bottleneck)** (June 7, 2026) — Capability has moved; the remaining bottleneck is the workflow around the model.
+- **[The Week Science Models Became Real](https://www.k-dense.ai/blog/frontier-science-models-arrive)** (June 12, 2026) — Frontier models entered scientific workflows; the next bottleneck is evidence.
+- **[Reproduction, Not Generation, Is AI's Killer App for Science](https://www.k-dense.ai/blog/reproduction-not-generation-ai-for-science)** (June 16, 2026) — Agents that reproduce published findings matter more than agents that generate unchecked claims.
+- **[AI Scientists Need Lab Escape Rooms, Not More Exams](https://www.k-dense.ai/blog/science-needs-better-black-boxes)** (June 29, 2026) — Benchmarks should demand real evidence, not science theater.
+
+**How agent skills work**
+- **[Agent Skills: The Final Piece for AI-Powered Scientific Research](https://www.k-dense.ai/blog/agent-skills-final-piece-for-ai-powered-research)** (January 13, 2026) — Why composable skills close the gap between raw model intelligence and domain expertise.
 
 ## Installation
 
