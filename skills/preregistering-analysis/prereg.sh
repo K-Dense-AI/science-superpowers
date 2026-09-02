@@ -24,8 +24,9 @@
 #   FROZEN      the registration has a freeze commit in history
 #   STAMP       the stamped hash matches the real freeze commit
 #   INTEGRITY   content is byte-identical to the frozen version (the
-#               stamp line is the only permitted difference), at HEAD
-#               and in the working tree
+#               stamp line, and the blank line freeze inserts with it,
+#               are the only permitted differences), at HEAD and in
+#               the working tree
 #   CHRONOLOGY  no commit touching a results path is at-or-before the
 #               freeze commit (commit ancestry, not forgeable dates)
 #   DATA        frozen raw-data checksums still match the files
@@ -63,9 +64,19 @@ rel_path() {
     printf '%s\n' "${_abs#"$ROOT"/}"
 }
 
-# strip_stamp — filter out the stamp line so it never breaks INTEGRITY
+# strip_stamp — remove the stamp line so it never breaks INTEGRITY. When
+# freeze had to insert the stamp itself (the document had no placeholder) it
+# also inserted a blank line 2; remove that too, so the normalised text
+# matches the frozen version exactly. Applied identically to the frozen,
+# HEAD, and working-tree versions.
 strip_stamp() {
-    grep -v "^\*\*Frozen at commit:\*\*" || true
+    awk -v p="$STAMP_PREFIX" '
+        NR == 2 && $0 == ""                   { held = 1; next }
+        NR == 3 && held && index($0, p) == 1  { held = 0; next }
+        held                                  { print ""; held = 0 }
+        index($0, p) == 1                     { next }
+                                              { print }
+        END { if (held) print "" }'
 }
 
 # ---------------------------------------------------------------- freeze
