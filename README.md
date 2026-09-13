@@ -22,6 +22,7 @@ It is a reimplementation of [Superpowers](https://github.com/obra/superpowers) (
 
 ## Contents
 
+- [Documentation](docs/README.md)
 - [How it works](#how-it-works)
 - [The basic workflow](#the-basic-workflow)
 - [Example: what using it looks like](#example-what-using-it-looks-like)
@@ -153,6 +154,8 @@ Essays from the [K-Dense blog](https://www.k-dense.ai/blog) on this methodology 
 
 Installation differs by harness. If you use more than one, install Science Superpowers separately for each.
 
+For setup commands and verification steps, see the [installation guide](docs/installation.md). New users can follow [Getting started](docs/getting-started.md); the [documentation index](docs/README.md) links to workflow, pre-registration, skills, and troubleshooting guides.
+
 ### Agent Plugins (any conformant client)
 
 This repository is a valid [Agent Plugins](https://agent-plugins.org/) v1.0.0 package — the open, vendor-neutral plugin standard. The portable manifest is `plugin.json` at the repository root, and the sixteen skills are the immediate children of `skills/`, each with its own `SKILL.md`.
@@ -193,6 +196,8 @@ Antigravity natively supports Agent Skills (the same `SKILL.md` format) and read
 ## Contributing
 
 See `AGENTS.md` / `CLAUDE.md` for contributor guidelines, and `skills/writing-science-skills/SKILL.md` for the complete guide to creating and testing skills.
+
+The [contributor guide](docs/contributing.md) covers repository architecture, behavioral testing, hook checks, and version maintenance.
 
 ## License
 
